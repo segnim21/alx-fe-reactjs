@@ -1,3 +1,4 @@
+import React from 'react';
 import React, { useState } from 'react';
 import UserContext from './UserContext';
 import ProfilePage from './ProfilePage';

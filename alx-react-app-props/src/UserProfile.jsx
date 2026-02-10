@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import UserContext from '../UserContext'; // adjust path if needed
+import UserContext from './UserContext';
 
 function UserProfile() {
-  const userData = useContext(UserContext); // get data from context
+  const userData = useContext(UserContext);
 
   return (
     <div>
