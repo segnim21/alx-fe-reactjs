@@ -1,4 +1,6 @@
+
 import WelcomeMessage from './components/WelcomeMessage';
+import Counter from './components/Counter';
 import Header from './components/Header';
 import MainContent from './components/MainContent';
 import Footer from './components/Footer';
@@ -15,6 +17,7 @@ function App() {
     <>
       <div>
         <WelcomeMessage />
+        <Counter />
         <Header />
         <MainContent />
         <Footer />
