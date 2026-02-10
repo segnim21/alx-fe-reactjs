@@ -1,11 +1,13 @@
-
-import UserInfo from './UserInfo';
+// src/ProfilePage.jsx
+import React from 'react';
+import UserProfile from './UserProfile';
 
 function ProfilePage() {
-    // we no longer need to pass userdata as a prop
-    return (
-        <UserInfo />
-    );
+  return (
+    <div>
+      <UserProfile />
+    </div>
+  );
 }
 
 export default ProfilePage;
