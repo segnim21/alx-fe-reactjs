@@ -1,16 +1,13 @@
-// src/UserProfile.jsx
-import React, { useContext } from 'react';
-import UserContext from '../UserContext'; // import the context
+import { useContext } from 'react';
+import UserContext from '../UserContext'; // adjust path if needed
 
 function UserProfile() {
-  // Get userData from the context
-  const userData = useContext(UserContext);
+  const userData = useContext(UserContext); // get data from context
 
   return (
-    <div style={{ border: '1px solid gray', padding: '10px', margin: '10px' }}>
-      <h2 style={{ color: 'blue' }}>{userData.name}</h2>
-      <p>Email: <span style={{ fontWeight: 'bold' }}>{userData.email}</span></p>
-      <p>Bio: Loves hiking and photography</p>
+    <div>
+      <p>Name: {userData.name}</p>
+      <p>Email: {userData.email}</p>
     </div>
   );
 }
