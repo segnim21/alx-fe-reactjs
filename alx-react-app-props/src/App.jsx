@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import UserContext from './UserContext';
-import ProfilePage from './ProfilePage';
+import UserContext from './components/UserContext';
+import ProfilePage from './components/ProfilePage';
 import WelcomeMessage from './components/WelcomeMessage';
 import Header from './components/Header';
 import MainContent from './components/MainContent';
