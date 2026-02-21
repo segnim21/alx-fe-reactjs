@@ -43,7 +43,7 @@ function Search() {
       </form>
 
       {loading && <p>Loading...</p>}
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && <p style={{ color: 'red' }}>Looks like we cant find the user</p>}
       {userData && !loading && !error && (
         <div className="user-info">
           <img src={userData.avatar_url} alt={userData.name} width="100" />
