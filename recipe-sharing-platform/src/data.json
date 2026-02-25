@@ -3,24 +3,94 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper. Ready in just 20 minutes!",
-    "image": "https://images.unsplash.com/photo-1612874742237-6526221588e4?w=400&h=300&fit=crop"
+    "image": "https://images.unsplash.com/photo-1612874742237-6526221588e4?w=400&h=300&fit=crop",
+    "ingredients": [
+      "200g spaghetti",
+      "100g pancetta or bacon",
+      "2 large eggs",
+      "50g pecorino cheese, grated",
+      "50g parmesan, grated",
+      "Freshly ground black pepper",
+      "Salt"
+    ],
+    "instructions": [
+      "Bring a large pot of salted water to boil and cook spaghetti according to package instructions.",
+      "While pasta cooks, fry pancetta in a pan until crispy.",
+      "In a bowl, whisk eggs with grated cheeses and plenty of black pepper.",
+      "Drain pasta, reserving some pasta water. Add hot pasta to the pan with pancetta and toss.",
+      "Remove from heat, quickly pour in egg mixture and toss vigorously. Add a splash of pasta water if needed to create a creamy sauce.",
+      "Serve immediately with extra cheese and pepper."
+    ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken cooked in a smooth, buttery & creamy tomato based gravy. Served best with naan.",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=300&fit=crop"
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=300&fit=crop",
+    "ingredients": [
+      "500g chicken breast, cubed",
+      "1 cup yogurt",
+      "2 tbsp tikka masala spice mix",
+      "1 onion, finely chopped",
+      "2 garlic cloves, minced",
+      "1 tbsp ginger, grated",
+      "400g crushed tomatoes",
+      "1 cup heavy cream",
+      "Fresh cilantro for garnish"
+    ],
+    "instructions": [
+      "Marinate chicken in yogurt and spice mix for at least 1 hour.",
+      "Grill or pan-fry chicken until cooked; set aside.",
+      "In a pan, sauté onion, garlic, and ginger until soft.",
+      "Add crushed tomatoes and simmer for 10 minutes.",
+      "Stir in cream and cooked chicken; simmer for another 5 minutes.",
+      "Garnish with cilantro and serve with rice or naan."
+    ]
   },
   {
     "id": 3,
     "title": "Classic Pancakes",
     "summary": "Fluffy homemade pancakes perfect for breakfast. Serve with maple syrup and fresh berries.",
-    "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=300&fit=crop"
+    "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=300&fit=crop",
+    "ingredients": [
+      "1 1/2 cups all-purpose flour",
+      "3 1/2 tsp baking powder",
+      "1 tbsp sugar",
+      "1/2 tsp salt",
+      "1 1/4 cups milk",
+      "1 egg",
+      "3 tbsp melted butter"
+    ],
+    "instructions": [
+      "In a bowl, whisk flour, baking powder, sugar, and salt.",
+      "In another bowl, beat milk, egg, and melted butter.",
+      "Pour wet ingredients into dry and stir until just combined (batter may be lumpy).",
+      "Heat a lightly oiled pan over medium heat. Pour 1/4 cup batter for each pancake.",
+      "Cook until bubbles form on surface, then flip and cook until golden.",
+      "Serve warm with syrup and berries."
+    ]
   },
   {
     "id": 4,
     "title": "Caesar Salad",
     "summary": "Crisp romaine lettuce, crunchy croutons, and parmesan cheese with our signature Caesar dressing.",
-    "image": "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=400&h=300&fit=crop"
+    "image": "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=400&h=300&fit=crop",
+    "ingredients": [
+      "1 head romaine lettuce, torn",
+      "1 cup croutons",
+      "1/2 cup grated parmesan cheese",
+      "For dressing:",
+      "1/2 cup mayonnaise",
+      "2 tbsp lemon juice",
+      "1 tsp Dijon mustard",
+      "1 garlic clove, minced",
+      "2 tbsp grated parmesan",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Whisk all dressing ingredients together.",
+      "In a large bowl, combine lettuce, croutons, and parmesan.",
+      "Toss with dressing just before serving."
+    ]
   }
 ]
