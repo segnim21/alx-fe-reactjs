@@ -65,6 +65,12 @@ function HomePage() {
           <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">
             Discover and share amazing recipes from our community
           </p>
+          <Link
+    to="/add"
+    className="inline-block mt-6 bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-6 rounded-lg transition-colors"
+  >
+    + Share Your Recipe
+  </Link>
         </header>
 
         {/* Responsive Grid - includes ALL breakpoints */}
