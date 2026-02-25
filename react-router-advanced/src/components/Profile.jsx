@@ -1,8 +1,10 @@
-import { Routes, Route, Link, Outlet, useNavigate } from 'react-router-dom';
+import { Routes, Route, Link, useNavigate } from 'react-router-dom';
+import useAuth from '../hooks/useAuth'; // Import the hook
 
 // Sub-components for nested routes
 const ProfileDetails = () => {
-  const username = localStorage.getItem('username') || 'User';
+  const { user } = useAuth();
+  const username = user?.username || 'User';
   
   return (
     <div className="profile-details">
@@ -48,14 +50,14 @@ const ProfileSettings = () => {
   );
 };
 
-// Main Profile component with nested routes
+// Main Profile component
 const Profile = () => {
   const navigate = useNavigate();
-  const username = localStorage.getItem('username') || 'User';
+  const { user, logout } = useAuth(); // Use the hook
+  const username = user?.username || 'User';
 
   const handleLogout = () => {
-    localStorage.removeItem('isAuthenticated');
-    localStorage.removeItem('username');
+    logout(); // Use the logout function from hook
     navigate('/login');
   };
 
@@ -73,7 +75,6 @@ const Profile = () => {
       </div>
       
       <div className="profile-content">
-        {/* Nested routes are rendered here */}
         <Routes>
           <Route index element={<ProfileDetails />} />
           <Route path="details" element={<ProfileDetails />} />

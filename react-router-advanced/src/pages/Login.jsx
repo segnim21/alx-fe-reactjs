@@ -1,28 +1,29 @@
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  
   const navigate = useNavigate();
   const location = useLocation();
+  const { login } = useAuth(); // Use the login function from hook
   
-  // Get the page user tried to visit before login
   const from = location.state?.from?.pathname || '/profile';
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setError('');
     
-    // Simple authentication - in real app, this would be an API call
-    if (username && password) {
-      // Store auth token (simplified)
-      localStorage.setItem('isAuthenticated', 'true');
-      localStorage.setItem('username', username);
-      
-      // Redirect to the page they tried to visit, or profile
+    // Use the login function from the hook
+    const success = login(username, password);
+    
+    if (success) {
       navigate(from, { replace: true });
     } else {
-      alert('Please enter username and password');
+      setError('Please enter both username and password');
     }
   };
 
@@ -30,6 +31,7 @@ const Login = () => {
     <div className="login-container">
       <h2>Login</h2>
       <p>Demo credentials: any username/password works</p>
+      {error && <div className="error-message">{error}</div>}
       <form onSubmit={handleSubmit} className="login-form">
         <div>
           <label htmlFor="username">Username:</label>
