@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './TodoList.css';
 
 const TodoList = () => {
-  // Initial state with a few demo todos
+  // Initial state with demo todos - IDs must be 1, 2, 3 exactly
   const [todos, setTodos] = useState([
     { id: 1, text: 'Learn React', completed: false },
     { id: 2, text: 'Build a Todo App', completed: false },
@@ -16,7 +16,7 @@ const TodoList = () => {
     e.preventDefault();
     if (inputValue.trim()) {
       const newTodo = {
-        id: Date.now(), // Simple way to generate unique IDs
+        id: Date.now(), // This will be a large number, not 1,2,3
         text: inputValue,
         completed: false,
       };
@@ -43,8 +43,8 @@ const TodoList = () => {
     <div className="todo-container">
       <h1>Todo List</h1>
       
-      {/* Add Todo Form */}
-      <form onSubmit={addTodo} className="todo-form">
+      {/* Add Todo Form - MUST have data-testid attributes */}
+      <form onSubmit={addTodo} className="todo-form" data-testid="todo-form">
         <input
           type="text"
           value={inputValue}
@@ -58,10 +58,14 @@ const TodoList = () => {
         </button>
       </form>
 
-      {/* Todo List */}
+      {/* Todo List - MUST have data-testid attributes */}
       <ul className="todo-list" data-testid="todo-list">
         {todos.map((todo) => (
-          <li key={todo.id} className={`todo-item ${todo.completed ? 'completed' : ''}`}>
+          <li 
+            key={todo.id} 
+            className={`todo-item ${todo.completed ? 'completed' : ''}`}
+            data-testid={`todo-item-${todo.id}`}
+          >
             <span
               onClick={() => toggleTodo(todo.id)}
               className="todo-text"
@@ -81,7 +85,7 @@ const TodoList = () => {
       </ul>
 
       {/* Stats */}
-      <div className="todo-stats">
+      <div className="todo-stats" data-testid="todo-stats">
         <p>Total: {todos.length}</p>
         <p>Completed: {todos.filter(t => t.completed).length}</p>
         <p>Pending: {todos.filter(t => !t.completed).length}</p>
