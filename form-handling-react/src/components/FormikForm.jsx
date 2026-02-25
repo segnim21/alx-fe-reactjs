@@ -1,7 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
-// Step 1: Define validation schema using Yup
 const validationSchema = Yup.object({
   username: Yup.string().required('Username is required'),
   email: Yup.string().email('Invalid email format').required('Email is required'),
@@ -9,31 +8,19 @@ const validationSchema = Yup.object({
 });
 
 const FormikForm = () => {
-  // Step 2: Initial values – same as before
-  const initialValues = {
-    username: '',
-    email: '',
-    password: '',
-  };
+  const initialValues = { username: '', email: '', password: '' };
 
-  // Step 3: Handle submission
   const onSubmit = (values, { setSubmitting, resetForm }) => {
     console.log('Formik submitted:', values);
-    // Simulate API call
     setTimeout(() => {
       alert('Registration successful (Formik)');
-      setSubmitting(false); // re-enable the submit button
-      resetForm(); // clear the form
+      setSubmitting(false);
+      resetForm();
     }, 1000);
   };
 
   return (
-    <Formik
-      initialValues={initialValues}
-      validationSchema={validationSchema}
-      onSubmit={onSubmit}
-    >
-      {/* The function inside Formik receives formik props, but we don't need them directly here */}
+    <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
       {({ isSubmitting }) => (
         <Form>
           <div>

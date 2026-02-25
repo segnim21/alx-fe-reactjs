@@ -4,7 +4,7 @@ import FormikForm from './components/FormikForm';
 function App() {
   return (
     <div>
-      <h1>Controlled Component Form</h1>
+      <h1>Controlled Component Form (Separate State)</h1>
       <RegistrationForm />
       <hr />
       <h1>Formik Form</h1>
