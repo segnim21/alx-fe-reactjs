@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper. Ready in just 20 minutes!",
+    "image": "https://images.unsplash.com/photo-1612874742237-6526221588e4?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken cooked in a smooth, buttery & creamy tomato based gravy. Served best with naan.",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 3,
+    "title": "Classic Pancakes",
+    "summary": "Fluffy homemade pancakes perfect for breakfast. Serve with maple syrup and fresh berries.",
+    "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 4,
+    "title": "Caesar Salad",
+    "summary": "Crisp romaine lettuce, crunchy croutons, and parmesan cheese with our signature Caesar dressing.",
+    "image": "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=400&h=300&fit=crop"
+  }
+]
