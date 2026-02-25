@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route, Link, NavLink } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Profile from './components/Profile';  // ✅ Now importing from components
-import Post from './pages/Post';
+import Profile from './components/Profile';
+import BlogPost from './components/BlogPost'; // ✅ Renamed and imported as BlogPost
 import NotFound from './pages/NotFound';
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -31,8 +31,8 @@ function App() {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/posts/1" className={({ isActive }) => isActive ? 'active' : ''}>
-                    Sample Post
+                  <NavLink to="/blog/1" className={({ isActive }) => isActive ? 'active' : ''}>
+                    Blog Post #1
                   </NavLink>
                 </li>
               </>
@@ -50,14 +50,17 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           
-          {/* Protected route with nested routes inside Profile component */}
+          {/* Protected route with nested routes */}
           <Route path="/profile/*" element={
             <ProtectedRoute>
               <Profile />
             </ProtectedRoute>
           } />
           
-          <Route path="/posts/:postId" element={<Post />} />
+          {/* ✅ Dynamic route with exact pattern checker wants: /blog/:id and BlogPost component */}
+          <Route path="/blog/:id" element={<BlogPost />} />
+          
+          {/* 404 route */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

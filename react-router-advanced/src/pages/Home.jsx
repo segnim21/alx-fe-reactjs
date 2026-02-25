@@ -10,9 +10,10 @@ const Home = () => {
         <h2>Try these features:</h2>
         <ul>
           <li><Link to="/profile">Go to Profile (Protected)</Link></li>
-          <li><Link to="/posts/1">View Post #1 (Dynamic Route)</Link></li>
-          <li><Link to="/posts/2">View Post #2 (Dynamic Route)</Link></li>
-          <li><Link to="/posts/3">View Post #3 (Dynamic Route)</Link></li>
+          <li><Link to="/blog/1">Read Blog Post #1 (Dynamic Route)</Link></li>
+          <li><Link to="/blog/2">Read Blog Post #2 (Dynamic Route)</Link></li>
+          <li><Link to="/blog/3">Read Blog Post #3 (Dynamic Route)</Link></li>
+          <li><Link to="/blog/999">Try Non-existent Blog Post</Link></li>
           <li><Link to="/login">Login Page</Link></li>
         </ul>
       </div>
