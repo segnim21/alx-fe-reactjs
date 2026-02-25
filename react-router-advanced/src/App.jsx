@@ -2,9 +2,7 @@ import { BrowserRouter, Routes, Route, Link, NavLink } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import ProfileLayout from './layouts/ProfileLayout';
-import ProfileDetails from './pages/ProfileDetails';
-import ProfileSettings from './pages/ProfileSettings';
+import Profile from './components/Profile';  // ✅ Now importing from components
 import Post from './pages/Post';
 import NotFound from './pages/NotFound';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -52,15 +50,12 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           
-          <Route path="/profile" element={
+          {/* Protected route with nested routes inside Profile component */}
+          <Route path="/profile/*" element={
             <ProtectedRoute>
-              <ProfileLayout />
+              <Profile />
             </ProtectedRoute>
-          }>
-            <Route index element={<ProfileDetails />} />
-            <Route path="details" element={<ProfileDetails />} />
-            <Route path="settings" element={<ProfileSettings />} />
-          </Route>
+          } />
           
           <Route path="/posts/:postId" element={<Post />} />
           <Route path="*" element={<NotFound />} />
